@@ -1,3 +1,4 @@
+
 /**
  * Эту функцию трогать не нужно
  */
@@ -10,8 +11,13 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
-}
+ if (name.length > 0 && name.indexOf(' ') == -1 && name.length >= 4) {
+   return true;
+ } else {
+   return false;
+ }
+  }
+
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
