@@ -5,6 +5,6 @@
  */
 function ucFirst(str) {
   if (str.length == 0) return "";
-  str.toLowerCase;
-  return str[0].toUpperCase() + str.slice(1);
+  lowStr = str.toLowerCase();
+  return lowStr[0].toUpperCase() + lowStr.slice(1);
 }
