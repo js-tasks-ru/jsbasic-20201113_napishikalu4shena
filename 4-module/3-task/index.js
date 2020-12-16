@@ -27,12 +27,11 @@ function highlight(table) {
       true: 'available',
       false: 'unavailable'
     }
-  
-    for (let k = 1; k < table.rows.length; k++) {
+      for (let k = 1; k < table.rows.length; k++) {
       let classGender = table.rows[k].cells[genderIndex];
       classGender.parentNode.classList.add(classContainer[classGender.innerHTML]);
-      let classAge = table.rows[k].cells[ageIndex].innerHTML; 
-        if (classAge < 18) {
+      let classAge = +table.rows[k].cells[ageIndex].innerHTML;
+          if (classAge < 18) {
         classGender.parentNode.setAttribute('style', 'text-decoration: line-through')
         }
       let classStatus = table.rows[k].cells[statusIndex];
@@ -42,7 +41,8 @@ function highlight(table) {
       } else {
         classStatus.parentNode.hidden = true;
       }
-    }}
+    }
+}
   
 
 
